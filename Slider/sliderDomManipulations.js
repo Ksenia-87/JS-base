@@ -17,6 +17,11 @@ let currentRight = parseInt(computed.right);
   if (currentRight < 500) {
     items.style.right = `${currentRight + 100}px`;
   }
+
+  if (currentRight == 500) {
+    items.style.right = `${0}px`;
+  }
+
   setTimeout (() => {
     treshhold = false; 
   }, 300);
@@ -31,6 +36,11 @@ left.addEventListener("click", function(e) {
   if (currentRight > 0) {
     items.style.right = `${currentRight - 100}px`;
   }
+
+  if (currentRight == 0) {
+    items.style.right = `${currentRight + 500}px`;
+  }
+
   setTimeout (() => {
     treshhold = false; 
   }, 300);
