@@ -1,9 +1,14 @@
 const openButton = document.querySelector("#openOverlay");
+const newButton = document.querySelector("#newButton");
 const body = document.body;
 const successModal = createModal("The message has been sent, thank you!");
 
 openButton.addEventListener("click", (e) => {
   body.appendChild(successModal);
+});
+
+newButton.addEventListener("click", (e) => {
+  body.appendChild(createModal("New message!"));
 });
 
 function createModal(content) {
@@ -14,9 +19,6 @@ function createModal(content) {
     if (!e.target.classList.contains("content")) {
       closeElement.click();
     }
-    // if (e.target === overlayElement) {
-    //   closeElement.click();
-    // }
   });
 
   const containerElement = document.createElement("div");
@@ -43,3 +45,4 @@ function createModal(content) {
 
   return overlayElement;
 }
+

@@ -64,7 +64,9 @@ body, html {
   outline: none;
   border: none;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .btn:hover {
   opacity: 0.8;
+}
